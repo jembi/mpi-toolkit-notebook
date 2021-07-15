@@ -31,24 +31,13 @@ if len(args) != 3:
     print(f"usage python generate-data.py 1000 500 data-1000-500.csv")
     exit(-1)
 
-ATTR_NAME = "name"  # IN
-ATTR_FATHERS_NAME = "fathersName"  # IN
-ATTR_FATHERS_FATHER_NAME = "fathersFatherName"  # IN
-ATTR_MOTHERS_NAME = "mothersName"  # IN
-ATTR_MOTHERS_FATHER_NAME = "mothersFatherName"  # IN
-ATTR_GENDER = "gender"  # IN
+ATTR_NAME = "first_name"  # IN
+ATTR_FATHERS_NAME = "last_name"  # IN
+ATTR_GENDER = "gender_at_birth"  # IN
 ATTR_DOB = "dob"  # IN
-# ATTR_COUNTRY = "country"  # IN
-# ATTR_STATE = "state"
-ATTR_DISTRICT = "district"  # IN
 ATTR_TOWN = "town"  # IN
-ATTR_PHONE_NUMBER = "PhoneNumber"  # IN
-# ATTR_NATIONAL_ID = "national_id"  # IN
-
-# ATTR_REG_ID = "registration_id"  # IN
-# ATTR_REG_FACILITY_CODE = "registration_facility_code"  # IN
-ATTR_ENROLLMENT_HIV_ID = "hivCaseReportNumber"
-# ATTR_ENROLLMENT_FACILITY_CODE = "enrollment_hiv_facility_code"
+ATTR_PHONE_NUMBER = "phone_number"  # IN
+ATTR_NATIONAL_ID = "national_id"  # IN
 
 # Set the Unicode encoding for this data generation project. This needs to be
 # changed to another encoding for different Unicode character sets.
@@ -106,7 +95,7 @@ name_gender_attr = \
     generator.GenerateCateCateCompoundAttribute(
         categorical1_attribute_name=ATTR_NAME,
         categorical2_attribute_name=ATTR_GENDER,
-        lookup_file_name='lookup-files/given-name-freq.csv',
+        lookup_file_name='lookup-files/given-name-gender-freq.csv',
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
 
@@ -117,81 +106,29 @@ fathersName_attr = \
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
 
-fathersFatherName_attr = \
-    generator.GenerateFreqAttribute(
-        attribute_name=ATTR_FATHERS_FATHER_NAME,
-        freq_file_name='lookup-files/name-m-freq.csv',
-        has_header_line=False,
-        unicode_encoding=unicode_encoding_used)
-mothersName_attr = \
-    generator.GenerateFreqAttribute(
-        attribute_name=ATTR_MOTHERS_NAME,
-        freq_file_name='lookup-files/name-m-freq.csv',
-        has_header_line=False,
-        unicode_encoding=unicode_encoding_used)
-mothersFatherName_attr = \
-    generator.GenerateFreqAttribute(
-        attribute_name=ATTR_MOTHERS_FATHER_NAME,
-        freq_file_name='lookup-files/name-m-freq.csv',
-        has_header_line=False,
-        unicode_encoding=unicode_encoding_used)
-
-# avonym_attr = \
-#    generator.GenerateFreqAttribute(
-#        attribute_name='Avonym',
-#        freq_file_name='lookup-files/name-m-freq.csv',
-#        has_header_line=False,
-#        unicode_encoding=unicode_encoding_used)
-
 date_of_birth_attr = \
     generator.GenerateFuncAttribute(
         attribute_name=ATTR_DOB,
         function=attrgenfunct.generate_date_of_birth)
 
-town_district_attr = \
-    generator.GenerateCateCateCompoundAttribute(
-        categorical1_attribute_name=ATTR_TOWN,
-        categorical2_attribute_name=ATTR_DISTRICT,
-        lookup_file_name='lookup-files/town-region-2.csv',
+town_attr = \
+    generator.GenerateFreqAttribute(
+        attribute_name=ATTR_TOWN,
+        freq_file_name='lookup-files/town-freq.csv',
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
-
-# country_attr = \
-#     generator.GenerateFreqAttribute(
-#         attribute_name=ATTR_COUNTRY,
-#         freq_file_name='lookup-files/country-freq.csv',
-#         has_header_line=False,
-#         unicode_encoding=unicode_encoding_used)
 
 phone_num_attr = \
     generator.GenerateFuncAttribute(
         attribute_name=ATTR_PHONE_NUMBER,
         function=attrgenfunct.generate_phone_number_ethiopia)
 
-# national_id_attr = \
-#     generator.GenerateFuncAttribute(
-#         attribute_name=ATTR_NATIONAL_ID,
-#         function=attrgenfunct.generate_national_id_number)
+national_id_attr = \
+     generator.GenerateFuncAttribute(
+        attribute_name=ATTR_NATIONAL_ID,
+        function=attrgenfunct.generate_national_id_number)
 
-# registration_id_attr =  \
-#     generator.GenerateFuncAttribute(
-#         attribute_name=ATTR_REG_ID,
-#         function=attrgenfunct.generate_client_registration_id)
 
-# registration_facility_code_attr =  \
-#     generator.GenerateFuncAttribute(
-#         attribute_name=ATTR_REG_FACILITY_CODE,
-#         function=attrgenfunct.generate_client_registration_facility_code)
-
-enrollment_hiv_id_attr = \
-    generator.GenerateFuncAttribute(
-        attribute_name=ATTR_ENROLLMENT_HIV_ID,
-        function=attrgenfunct.generate_enrollment_hiv_id)
-
-# enrollment_hiv_facility_code_attr = \
-#     generator.GenerateFuncAttribute(
-#         attribute_name=ATTR_ENROLLMENT_FACILITY_CODE,
-#         function=attrgenfunct.generate_enrollment_hiv_facility_code)
 
 # -----------------------------------------------------------------------------
 # Define how the generated records are to be corrupted (using methods from
@@ -258,38 +195,23 @@ missing_val_corruptor = corruptor.CorruptMissingValue()
 # Define the attributes to be generated for this data set, and the data set
 # itself.
 #
-attr_name_list = [ATTR_ENROLLMENT_HIV_ID,
-                  ATTR_NAME,
+attr_name_list = [ATTR_NAME,
                   ATTR_FATHERS_NAME,
-                  ATTR_FATHERS_FATHER_NAME,
-                  ATTR_MOTHERS_NAME,
-                  ATTR_MOTHERS_FATHER_NAME,
                   ATTR_GENDER,
                   ATTR_DOB,
-                  #   ATTR_COUNTRY,
-                  ATTR_DISTRICT,
                   ATTR_TOWN,
                   ATTR_PHONE_NUMBER,
-                  #   ATTR_REG_ID,
-                  #   ATTR_REG_FACILITY_CODE,
-                  #   ATTR_ENROLLMENT_FACILITY_CODE,
-                  #   ATTR_NATIONAL_ID
+                  ATTR_NATIONAL_ID
                   ]
 
-attr_data_list = [  # national_id_attr,
+attr_data_list = [  
     name_gender_attr,
     fathersName_attr,
-    fathersFatherName_attr,
-    mothersName_attr,
-    mothersFatherName_attr,
     date_of_birth_attr,
-    #   country_attr,
-    town_district_attr,
+    town_attr,
     phone_num_attr,
-    #   registration_id_attr,
-    #   registration_facility_code_attr,
-    #   enrollment_hiv_facility_code_attr,
-    enrollment_hiv_id_attr]
+    national_id_attr
+]
 
 # Nothing to change here - set-up the data set generation object.
 #
@@ -310,30 +232,20 @@ test_data_generator = generator.GenerateDataSet(
 # will be applied on this attribute.
 #
 attr_mod_prob_dictionary = {
-    # ATTR_NATIONAL_ID: 0.09,
-    ATTR_NAME: 0.12,
-    ATTR_FATHERS_NAME: 0.11,
-    ATTR_FATHERS_FATHER_NAME: 0.10,
-    ATTR_MOTHERS_NAME: 0.10,
-    ATTR_MOTHERS_FATHER_NAME: 0.09,
-    ATTR_GENDER: 0.08,
-    ATTR_DISTRICT: 0.08,
+    ATTR_NAME: 0.22,
+    ATTR_FATHERS_NAME: 0.21,
+    ATTR_GENDER: 0.02,
     ATTR_DOB: 0.09,
-    ATTR_TOWN: 0.09,
-    # ATTR_COUNTRY: 0.07,
-    ATTR_PHONE_NUMBER: 0.07,
-    # ATTR_REG_ID: 0.07,
-    # ATTR_REG_FACILITY_CODE: 0.07,
-    # ATTR_ENROLLMENT_FACILITY_CODE: 0.07,
-    ATTR_ENROLLMENT_HIV_ID: 0.07}
+    ATTR_TOWN: 0.06,
+    ATTR_PHONE_NUMBER: 0.20,
+    ATTR_NATIONAL_ID: 0.20
+}
 
 # Define the actual corruption (modification) methods that will be applied on
 # the different attributes.
 # For each attribute, the sum of probabilities given must sum to 1.0.
 #
-attr_mod_data_dictionary = {  # ATTR_NATIONAL_ID: [(0.4, missing_val_corruptor),
-    # (0.2, ocr_corruptor),
-    # (0.4, keyboard_corruptor)],
+attr_mod_data_dictionary = {  
     ATTR_NAME: [(0.1, missing_val_corruptor),
                 (0.1, name_misspell_corruptor),
                 (0.1, edit_corruptor2),
@@ -346,35 +258,11 @@ attr_mod_data_dictionary = {  # ATTR_NATIONAL_ID: [(0.4, missing_val_corruptor),
                         (0.1, ocr_corruptor),
                         (0.1, keyboard_corruptor),
                         (0.5, phonetic_corruptor)],
-    ATTR_FATHERS_FATHER_NAME: [(0.1, missing_val_corruptor),
-                               (0.1, name_m_misspell_corruptor),
-                               (0.1, edit_corruptor2),
-                               (0.1, ocr_corruptor),
-                               (0.1, keyboard_corruptor),
-                               (0.5, phonetic_corruptor)],
-    ATTR_MOTHERS_NAME: [(0.1, missing_val_corruptor),
-                        (0.1, name_m_misspell_corruptor),
-                        (0.1, edit_corruptor2),
-                        (0.1, ocr_corruptor),
-                        (0.1, keyboard_corruptor),
-                        (0.5, phonetic_corruptor)],
-    ATTR_MOTHERS_FATHER_NAME: [(0.1, missing_val_corruptor),
-                               (0.1, name_m_misspell_corruptor),
-                               (0.1, edit_corruptor2),
-                               (0.1, ocr_corruptor),
-                               (0.1, keyboard_corruptor),
-                               (0.5, phonetic_corruptor)],
     ATTR_GENDER: [(0.2, missing_val_corruptor),
                   (0.4, ocr_corruptor),
                   (0.4, keyboard_corruptor)],
     ATTR_DOB: [(0.5, missing_val_corruptor),
                (0.5, keyboard_corruptor)],
-    ATTR_DISTRICT: [(0.1, missing_val_corruptor),
-                    (0.4, ocr_corruptor),
-                    (0.5, edit_corruptor)],
-    # ATTR_COUNTRY: [(0.2, missing_val_corruptor),
-    #                (0.4, edit_corruptor),
-    #                (0.4, phonetic_corruptor)],
     ATTR_TOWN: [(0.2, missing_val_corruptor),
                 (0.1, ocr_corruptor),
                 (0.5, keyboard_corruptor),
@@ -382,18 +270,9 @@ attr_mod_data_dictionary = {  # ATTR_NATIONAL_ID: [(0.4, missing_val_corruptor),
     ATTR_PHONE_NUMBER: [(0.2, missing_val_corruptor),
                         (0.4, edit_corruptor2),
                         (0.4, keyboard_corruptor)],
-    # ATTR_REG_ID: [(0.1, missing_val_corruptor),
-    #               (0.45, ocr_corruptor),
-    #               (0.45, keyboard_corruptor)],
-    # ATTR_REG_FACILITY_CODE: [(0.1, missing_val_corruptor),
-    #                          (0.2, ocr_corruptor),
-    #                          (0.7, keyboard_corruptor)],
-    # ATTR_ENROLLMENT_FACILITY_CODE: [(0.4, missing_val_corruptor),
-    #                                 (0.2, ocr_corruptor),
-    #                                 (0.4, keyboard_corruptor)],
-    ATTR_ENROLLMENT_HIV_ID: [(0.4, missing_val_corruptor),
-                             (0.2, ocr_corruptor),
-                             (0.4, keyboard_corruptor)]}
+    ATTR_NATIONAL_ID: [(0.4, missing_val_corruptor),
+                (0.2, ocr_corruptor),
+                (0.4, keyboard_corruptor)]}
 
 # Nothing to change here - set-up the data set corruption object
 #
