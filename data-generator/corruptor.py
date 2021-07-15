@@ -1621,9 +1621,11 @@ class CorruptDataSet:
                 num_dup += 1
                 self.prob_dist_list.append((num_dup,
                                             zipf_num[i]+self.prob_dist_list[-1][1]))
-
-        print('Probability distribution for number of duplicates per record:')
-        print(self.prob_dist_list)
+        
+        f = open("output_log_file.txt", "a")
+        f.write('Probability distribution for number of duplicates per record:')
+        f.write(str(self.prob_dist_list))
+        f.close()
 
         # Check probability list for attributes and dictionary for attributes - - -
         # if they sum to 1.0
@@ -1738,18 +1740,21 @@ class CorruptDataSet:
 
         # Generate a histogram of number of duplicates per record
         #
+
+        f = open("output_log_file.txt", "a")
+
         dup_histo = {}
+
         for (org_rec_id_to_mod, num_dups) in dup_rec_num_dict.items():
             dup_count = dup_histo.get(num_dups, 0) + 1
             dup_histo[num_dups] = dup_count
-        print('Distribution of number of original records with certain number ' +
-              'of duplicates:')
+        f.write('Distribution of number of original records with certain number of duplicates: \n')
         dup_histo_keys = dup_histo.keys()
         sorted(dup_histo_keys)  # .sort()
         for num_dups in dup_histo_keys:
-            print(' Number of records with %d duplicates: %d' %
+            f.write(' Number of records with %d duplicates: %d \n' %
                   (num_dups, dup_histo[num_dups]))
-        print
+        f.write("\n")
 
         num_dup_rec_created = 0  # Count how many duplicate records have been
         # generated
@@ -1759,8 +1764,11 @@ class CorruptDataSet:
         for (org_rec_id_to_mod, num_dups) in dup_rec_num_dict.items():
             assert (num_dups > 0) and (num_dups <= self.max_num_dup_per_rec)
 
-            print
-            print('Generating %d modified (duplicate) records for record "%s"' %
+            f.write("\n")
+            f.write('Generating %d modified (duplicate) records for record "%s" \n' %
+                  (num_dups, org_rec_id_to_mod))
+
+            print('Generating %d modified (duplicate) records for record "%s" \n' %
                   (num_dups, org_rec_id_to_mod))
 
             rec_to_mod_list = rec_dict[org_rec_id_to_mod]
@@ -1780,7 +1788,7 @@ class CorruptDataSet:
 
                 org_rec_num = org_rec_id_to_mod.split('-')[1]
                 dup_rec_id = 'rec-%s-bbb-%d' % (org_rec_num, d)
-                print('  Generate identifier for duplicate record based on "%s": %s'
+                f.write('  Generate identifier for duplicate record based on "%s": %s \n'
                       % (org_rec_id_to_mod, dup_rec_id))
 
                 # Count the number of modifications in this record (counted as the
@@ -1843,18 +1851,14 @@ class CorruptDataSet:
                         # record
                         #
                         if (new_attr_val != org_attr_val):
-                            print(
-                                '  Selected attribute for modification:', mod_attr_name)
-                            print('    Selected corruptor:',
-                                  corruptor_method.name)
+                            f.write('  Selected attribute for modification:' + str(mod_attr_name) + "\n")
+                            f.write('    Selected corruptor:' + str(corruptor_method.name) + "\n")
 
                             # The following weird string printing construct is to overcome
                             # problems with printing non-ASCII characters
                             #
-                            print('      Original attribute value:',
-                                  str([org_attr_val])[1:-1])
-                            print('      Modified attribute value:',
-                                  str([new_attr_val])[1:-1])
+                            f.write('      Original attribute value:' + str([org_attr_val][1:-1]) + "\n")
+                            f.write('      Modified attribute value:' + str([new_attr_val])[1:-1] + "\n")
 
                             dup_rec_list[mod_attr_name_index] = new_attr_val
 
@@ -1885,8 +1889,8 @@ class CorruptDataSet:
                     for check_dup_rec in this_dup_rec_list:
                         if (check_dup_rec == dup_rec_list):  # Same as a previous duplicate
                             is_diff = False
-                            print('Same duplicate:', check_dup_rec)
-                            print('               ', dup_rec_list)
+                            f.write('Same duplicate:' + str(check_dup_rec) + "\n")
+                            f.write('               ' + str(dup_rec_list) + "\n")
 
                 if (is_diff == True):  # Only keep duplicate records that are different
 
@@ -1897,9 +1901,9 @@ class CorruptDataSet:
                     d += 1
                     num_dup_rec_created += 1
 
-                    print('Original record:')
-                    print(' ', rec_to_mod_list)
-                    print('Record with %d modified attributes' %
+                    f.write('Original record:\n')
+                    f.write(' ' + str(rec_to_mod_list) + "\n")
+                    f.write('Record with %d modified attributes\n' %
                           (num_mod_in_record),)
                     attr_mod_str = '('
                     for a in self.attribute_name_list:
@@ -1907,11 +1911,13 @@ class CorruptDataSet:
                             attr_mod_str += '%d in %s, ' % (
                                 attr_mod_count_dict[a], a)
                     attr_mod_str = attr_mod_str[:-1]+'):'
-                    print(attr_mod_str)
-                    print(' ', dup_rec_list)
-                    print('%d of %d duplicate records generated so far' %
+                    f.write(str(attr_mod_str) + "\n")
+                    f.write(' ' + str(dup_rec_list) + "\n")
+                    f.write('%d of %d duplicate records generated so far \n' %
                           (num_dup_rec_created, self.number_of_mod_records))
-                    print
+                    f.write("\n")
+
+        f.close()
 
         return rec_dict
 
