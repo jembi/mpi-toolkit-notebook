@@ -1859,10 +1859,12 @@ class GenerateDataSet:
     num_rec_num_digit = len(str(self.number_of_records))+1  # For digit padding
     num_rec_num_digit = 8  # For digit padding
 
-    print
-    print('Generate records with attributes:')
-    print(' ', attr_name_list)
-    print
+    f = open("output_log_file.txt", "a")
+
+    f.write("\n")
+    f.write('Generate records with attributes: \n')
+    f.write(' ' + str(attr_name_list) + "\n")
+    f.write("\n")
 
     for rec_id in range(self.number_of_records):
       rec_id_str = 'rec-%s-aaa-0' % (str(rec_id).zfill(num_rec_num_digit))
@@ -1919,14 +1921,16 @@ class GenerateDataSet:
 
       rec_dict[rec_id_str] = this_rec_list
 
-      print('Generated record with ID: %s' % (rec_id_str))
-      print('  %s' % (str(this_rec_list)))
-      print
+      f.write('Generated record with ID: %s \n' % (rec_id_str))
+      f.write('  %s \n' % (str(this_rec_list)))
+      f.write("\n")
 
-    print('Generated %d records' % (self.number_of_records))
-    print
-    print('------------------------------------------------------------------')
-    print
+    f.write('Generated %d records \n' % (self.number_of_records))
+    f.write("\n")
+    f.write('------------------------------------------------------------------\n')
+    f.write("\n")
+
+    f.close()
 
     return rec_dict
 
