@@ -13,4 +13,4 @@ def compare(str1, str2, level=0.85):
 
 def output(name1, name2):
 
-    jaro_winkler(name1, name2)
+    return jaro_winkler(name1, name2)
