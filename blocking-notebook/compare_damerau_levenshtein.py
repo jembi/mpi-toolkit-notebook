@@ -8,3 +8,8 @@ def compare(str1, str2, level=2):
     if str1 and str2:
         return damerauLevenshtein(str1, str2, False) <= level
     return False
+
+
+def output(name1, name2):
+
+    return damerauLevenshtein(name1, name2, False)
