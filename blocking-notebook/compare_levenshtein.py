@@ -26,3 +26,8 @@ def edit_distance(seq1, seq2):                           # returns Levenshtein d
                 grid[j][i] = min(grid[j - 1][i - 1], grid[j][i - 1], grid[j - 1][i]) + 1
 
     return grid[-1][-1]
+
+
+def output(name1, name2):
+
+    return edit_distance(name1, name2)

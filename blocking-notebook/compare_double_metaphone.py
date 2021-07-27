@@ -9,3 +9,8 @@ def compare(str1, str2, level=0):
         if dm and dm in result2:
             return True
     return False
+
+
+def output(name):
+
+    return dmetaphone(name)

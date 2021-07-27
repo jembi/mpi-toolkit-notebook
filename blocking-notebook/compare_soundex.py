@@ -36,3 +36,8 @@ def format_soundex(soundex_list):
     for char in soundex_list:
         name += str(char)
     return name
+
+
+def output(name):
+
+    return convert_to_soundex(name)
