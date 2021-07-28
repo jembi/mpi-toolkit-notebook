@@ -104,7 +104,7 @@ number_of_duplicates =  500
 ##
 
 
-output.create_file()
+output.create_file()= 'data-{}-{}.csv'.format(num_org_rec, num_dup_rec)
 
 
 ATTR_NAME = "Given Name"  # IN
