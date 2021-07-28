@@ -166,7 +166,7 @@ name_gender_attr = \
 lastName_attr = \
     generator.GenerateFreqAttribute(
         attribute_name=ATTR_LAST_NAME,
-        freq_file_name='/lookup-files/family-name-freq.csv',
+        freq_file_name='lookup-files/family-name-freq.csv',
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
     
