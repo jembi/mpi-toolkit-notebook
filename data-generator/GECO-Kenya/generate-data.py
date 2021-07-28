@@ -25,6 +25,12 @@ import generator  # Main classes to generate records and the data set
 random.seed(42)  # Set seed for random generator, so data generation can
 #                       be repeated
 
+args = sys.argv[1:]
+
+if len(args) != 3:
+    print(f"usage python generate-data.py 1000 500 data-1000-500.csv")
+    exit(-1)
+
 #@title Run Data Generator
 
 #define variables (this section is in seperate cells in the notebook)
@@ -38,15 +44,6 @@ dob_val=0.19
 city_val=0.09
 pn_val=0.07
 nid_val=0.19
-
-# Data Generator parameters 
-max_duplicate_per_record =  2 
-
-num_duplicates_distribution = 'zipf' 
-
-max_modification_per_attr = 1 
-
-num_modification_per_record = 4 
 
 #Given Name Corruptor
 
@@ -97,16 +94,6 @@ ocr_NID = 0.2
 keyboard_NID = 0.4 
 
 
-
-number_of_originals =  1000 
-number_of_duplicates =  500
-
-##
-
-
-output.create_file()= 'data-{}-{}.csv'.format(num_org_rec, num_dup_rec)
-
-
 ATTR_NAME = "Given Name"  # IN
 ATTR_LAST_NAME = "Family Name"  # IN
 ATTR_GENDER = "Gender at Birth"  # IN
@@ -122,8 +109,6 @@ ATTR_NATIONAL_ID = "National ID"  # IN [optional]
 #
 unicode_encoding_used = 'utf_8'
 
-# ascii was used previouisly but caused encoding errors 
-
 # The name of the record identifier attribute (unique value for each record).
 # This name cannot be given as name to any other attribute that is generated.
 #
@@ -131,16 +116,34 @@ rec_id_attr_name = 'ID'
 
 # Set how many original and how many duplicate records are to be generated.
 #
-
-num_org_rec = int(number_of_originals)
-num_dup_rec = int(number_of_duplicates)
+num_org_rec = int(args[0])
+num_dup_rec = int(args[1])
 
 # Set the file name of the data set to be generated (this will be a comma
 # separated values, CSV, file).
 #
-out_file_name = 'data-{}-{}.csv'.format(num_org_rec, num_dup_rec)
+# out_file_name = 'data-{}-{}.csv'.format(num_org_rec, num_dup_rec)
+out_file_name = args[2]
 
+# Set the file name of the data set to be generated (this will be
+# Set the maximum number of duplicate records can be generated per original
+# record.
+#
+max_duplicate_per_record = 2
 
+# Set the probability distribution used to create the duplicate records for one
+# original record (possible values are: 'uniform', 'poisson', 'zipf').
+#
+num_duplicates_distribution = 'zipf'
+
+# Set the maximum number of modification that can be applied to a single
+# attribute (field).
+#
+max_modification_per_attr = 1
+
+# Set the number of modification that are to be applied to a record.
+#
+num_modification_per_record = 4
 
 # Check if the given the unicode encoding selected is valid.
 #
