@@ -27,8 +27,6 @@ random.seed(42)  # Set seed for random generator, so data generation can
 
 #@title Run Data Generator
 
-#@title Run Data Generator
-
 output.create_file()
 
 
