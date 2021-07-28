@@ -27,6 +27,83 @@ random.seed(42)  # Set seed for random generator, so data generation can
 
 #@title Run Data Generator
 
+#define variables (this section is in seperate cells in the notebook)
+#@title Data Generator Variables
+
+#Probability Distribution for Attributes
+given_name_val= 0.22
+family_name_val= 0.16
+gender_val=0.08
+dob_val=0.19
+city_val=0.09
+pn_val=0.07
+nid_val=0.19
+
+# Data Generator parameters 
+max_duplicate_per_record =  2 
+
+num_duplicates_distribution = 'zipf' 
+
+max_modification_per_attr = 1 
+
+num_modification_per_record = 4 
+
+#Given Name Corruptor
+
+missing_val_FN = 0.1 
+name_misspell_FN = 0.1 
+edit_FN = 0.1 
+ocr_FN = 0.1 
+keyboard_FN = 0.1 
+phonetic_FN = 0.5 
+
+#Family Name Corruptor
+
+missing_val_LN = 0.1 
+name_misspell_LN = 0.1 
+edit_LN = 0.1 
+ocr_LN = 0.1 
+keyboard_LN = 0.1 
+phonetic_LN = 0.5 
+
+#Gender at Birth Corruptor
+
+missing_val_GAB = 0.2 
+ocr_GAB = 0.4 
+keyboard_GAB = 0.4
+
+#Date of Birth Corruptor
+
+missing_val_DOB = 0.5 
+keyboard_DOB = 0.5 
+
+#City Corruptor
+
+missing_val_C = 0.2 
+edit_C = 0.4 
+phonetic_C = 0.4 
+
+
+#Phone Number Corruptor
+
+missing_val_PN = 0.2 
+edit_PN = 0.4 
+keyboard_PN = 0.4
+
+#National ID Corruptor
+
+missing_val_NID = 0.4 
+ocr_NID = 0.2 
+keyboard_NID = 0.4 
+
+
+
+number_of_originals =  1000 
+number_of_duplicates =  500
+
+##
+
+
 output.create_file()
 
 
