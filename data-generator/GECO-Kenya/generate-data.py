@@ -159,14 +159,14 @@ name_gender_attr = \
     generator.GenerateCateCateCompoundAttribute(
         categorical1_attribute_name=ATTR_NAME,
         categorical2_attribute_name=ATTR_GENDER,
-        lookup_file_name='/content/mpi-toolkit-notebook/data-generator/GECO-Kenya/lookup-files/given-name-gender-freq.csv',
+        lookup_file_name='lookup-files/given-name-gender-freq.csv',
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
     
 lastName_attr = \
     generator.GenerateFreqAttribute(
         attribute_name=ATTR_LAST_NAME,
-        freq_file_name='/content/mpi-toolkit-notebook/data-generator/GECO-Kenya/lookup-files/family-name-freq.csv',
+        freq_file_name='/lookup-files/family-name-freq.csv',
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
     
@@ -178,7 +178,7 @@ date_of_birth_attr = \
 city_attr = \
     generator.GenerateFreqAttribute(
          attribute_name=ATTR_CITY,
-         freq_file_name='/content/mpi-toolkit-notebook/data-generator/GECO-Kenya/lookup-files/city-freq.csv',
+         freq_file_name='lookup-files/city-freq.csv',
          has_header_line=False,
          unicode_encoding=unicode_encoding_used)
 
@@ -220,20 +220,20 @@ edit_corruptor2 = \
 
 name_misspell_corruptor = \
     corruptor.CorruptCategoricalValue(
-        lookup_file_name='/content/mpi-toolkit-notebook/data-generator/GECO-Kenya/lookup-files/name-misspell.csv',
+        lookup_file_name='lookup-files/name-misspell.csv',
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
 
 name_m_misspell_corruptor = \
     corruptor.CorruptCategoricalValue(
-        lookup_file_name='/content/mpi-toolkit-notebook/data-generator/GECO-Kenya/lookup-files/name-m-misspell.csv',
+        lookup_file_name='lookup-files/name-m-misspell.csv',
         has_header_line=False,
         unicode_encoding=unicode_encoding_used)
 
 
 ocr_corruptor = corruptor.CorruptValueOCR(
     position_function=corruptor.position_mod_normal,
-    lookup_file_name='/content/mpi-toolkit-notebook/data-generator/GECO-Kenya/lookup-files/ocr-variations.csv',
+    lookup_file_name='lookup-files/ocr-variations.csv',
     has_header_line=False,
     unicode_encoding=unicode_encoding_used)
 
@@ -243,7 +243,7 @@ keyboard_corruptor = corruptor.CorruptValueKeyboard(
     col_prob=0.5)
 
 phonetic_corruptor = corruptor.CorruptValuePhonetic(
-    lookup_file_name='/content/mpi-toolkit-notebook/data-generator/GECO-Kenya/lookup-files/phonetic-variations.csv',
+    lookup_file_name='lookup-files/phonetic-variations.csv',
     has_header_line=False,
     unicode_encoding=unicode_encoding_used)
 
