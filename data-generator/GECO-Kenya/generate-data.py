@@ -94,13 +94,13 @@ ocr_NID = 0.2
 keyboard_NID = 0.4 
 
 
-ATTR_NAME = "Given Name"  # IN
-ATTR_LAST_NAME = "Family Name"  # IN
-ATTR_GENDER = "Gender at Birth"  # IN
-ATTR_DOB = "Date of Birth"  # IN
-ATTR_CITY = "City"  # IN
-ATTR_PHONE_NUMBER = "Phone Number"  # IN [optional]
-ATTR_NATIONAL_ID = "National ID"  # IN [optional]
+ATTR_NAME = "first_name"  # IN
+ATTR_LAST_NAME = "last_ame"  # IN
+ATTR_GENDER = "gender"  # IN
+ATTR_DOB = "dob"  # IN
+ATTR_CITY = "city"  # IN
+ATTR_PHONE_NUMBER = "phone_number"  # IN [optional]
+ATTR_NATIONAL_ID = "national_id"  # IN [optional]
 
 # Set the Unicode encoding for this data generation project. This needs to be
 # changed to another encoding for different Unicode character sets.
@@ -112,7 +112,7 @@ unicode_encoding_used = 'utf_8'
 # The name of the record identifier attribute (unique value for each record).
 # This name cannot be given as name to any other attribute that is generated.
 #
-rec_id_attr_name = 'ID'
+rec_id_attr_name = 'source_system_id'
 
 # Set how many original and how many duplicate records are to be generated.
 #
