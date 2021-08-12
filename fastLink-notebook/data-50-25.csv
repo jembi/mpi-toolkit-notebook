@@ -1,0 +1,76 @@
+ID,hivCaseReportNumber,name,fathersName,fathersFatherName,mothersName,mothersFatherName,gender,dob,district,town,PhoneNumber
+rec-00000000-aaa-0,vz/6z/GlK/LadDW,Tolosa,Henock,Kebede,Kiros,Ayele,male,20050324,SNNP,Duna,011-655-1890
+rec-00000000-bbb-0,,Tolosta,Henokk,Kebede,Kiros,Ayel,male,20050324,SNNP,Duna,011-655-1890
+rec-00000001-aaa-0,52/Kj/tkM/2cNVE,Gubena,Genet,Hassen,Seboka,Mohammed,male,20080622,Oromia,Sayo,033-619-0743
+rec-00000001-bbb-0,52/Kj/tkM/2cNVE,Gubena,Gened,Hasse,Seboka,Mohammed,maoe,20080622,Oromia,Say9,033-619-0743
+rec-00000002-aaa-0,Vc/UN/BlV/7V8WF,Meles,Habtezgi,Alemseged,Wakene,Woldetsaoik,male,19940610,Afar,Telalek,091-720-1380
+rec-00000003-aaa-0,W5/NT/vrS/Qd3cJ,Desta,Bayitu,Alemneh,Aemero,Abdurehman,male,19940228,Somali,Babile,022-599-9955
+rec-00000004-aaa-0,i3/Hf/qq3/tRT6K,Marta,Busha,Araya,Yosef,Hasen,female,20110810,Oromia,Sebeta town,011-651-1671
+rec-00000005-aaa-0,jP/vo/pq8/EkSUX,Zerihun,Tenaw,Kebede,Utalo,Kibrom,male,20000121,Amhara,East Belesa,022-310-0181
+rec-00000005-bbb-0,jP/vo/pq8/EkSUX,,Tenaw,Kebede,Utalo,Kiprom,male,,Amhara,East Belesa,022-310-p181
+rec-00000006-aaa-0,Xa/SH/N3J/ejUqF,Wolde,Tesfaye,Gebretsadik,Yonas,Bogale,male,20010501,SNNP,Basketo SP Woreda,011-655-6608
+rec-00000007-aaa-0,a7/qH/dFi/HDQbZ,Ebrahim,Mohammed,Tedila,Mekonnen,Molalegn,male,20060830,Oromia,Becho (SW Shewa),047-381-4848
+rec-00000008-aaa-0,ks/pP/5TZ/2kOde,Mulie,Alemneh,Menilik,Mekonnen,Tegegn,male,20040110,Oromia,Kuyu,091-837-8346
+rec-00000009-aaa-0,iR/Nu/GZK/YqeU8,Sara,Kebede,Getaneh,Alemayehu,Gebrekiros,female,19971001,Sidama,Hawasa town,011-112-6142
+rec-00000009-bbb-0,iR/Nu/GZK/YqeU8,Sara,Kebede,Getaneh,Alemayeu,Gebrekiros,,19971001,Sidana,Hawasa t0wn,011-112-6142
+rec-00000009-bbb-1,iR/Nu/GZK/YqeU8,Sara,Kebete,Getaneh,Alemayeu,Geprekiros,,19971001,Sidama,Hawasa town,011-112-6142
+rec-00000010-aaa-0,36/QZ/BWj/eJxHd,Desta,Gebreyohannes,Asres,Atomisa,Tesema,male,20030324,Afar,Euwa,091-734-3701
+rec-00000010-bbb-0,36/QZ/BWj/eJxHd,eDsta,Gebreyohannez,Asre5,Adomisa,Tesema,male,20030324,Afar,Euwa,091-734-3701
+rec-00000011-aaa-0,OP/Iz/pgN/QQ8DJ,Korme,W.gebriel,Hagos,Gebrekidan,Gebregiorgis,male,20070620,SNNP,Damot Gale,047-800-4081
+rec-00000012-aaa-0,fI/DW/d0D/QkYy7,Jewehar,Girma,Temamo,Bejiga,Gebregiorgis,male,20010107,Oromia,Kercha,091-889-5794
+rec-00000013-aaa-0,ur/rD/nW0/vTaSO,Tenkolu,Mariyo,Birhanu,Abdo,Eshetu,male,20000729,Oromia,Kokosa,098-111-5086
+rec-00000014-aaa-0,y8/J0/0LD/vKpOk,Tema,Aman,Mehammed,Ebey,Zekarias,male,19921230,Sidama,Bensa,091-729-2597
+rec-00000015-aaa-0,oA/V5/tUx/4kFKG,Kenea,Gurara,Bilisuma,Reta,Demena,male,19970220,Oromia,Cheliya,058-953-1868
+rec-00000016-aaa-0,ew/PJ/CrA/H0N8O,Berga,Tezera,Ali,Assefa,Adane,male,19950206,Addis Ababa,Nefas Silk,011-536-7727
+rec-00000017-aaa-0,D4/Hy/jYs/CVFZn,Engida,Woldeyes,Tola,Gebrewold,Woldesilassie,male,20041124,Sidama,Malga,022-630-0280
+rec-00000017-bbb-0,D4/Hy/jYs/CVFZn,Enkida,Woldeyes,Tooa,Gebrewold,Woldesilassie,male,20041124,Sjdama,Malga,032-630-0280
+rec-00000018-aaa-0,RB/PT/RGQ/ZCgrh,Seifu,Ashagre,Gedamu,Gizaw,Samuel,male,20020304,Oromia,Abe Dongoro,011-655-0179
+rec-00000018-bbb-0,RB/PT/RGQ/ZCgrh,Seifu,Ashagre,Getamu,Gizaw,Samuel,ma|e,2002o304,Oromia,Abe Donhoro,011-655-0179
+rec-00000019-aaa-0,iK/zA/lew/uVPg3,Ahmed,Aminu,Shiferaw,Zekariya,Abebayehu,male,19961109,SNNP,Duguna Fango,011-651-7127
+rec-00000020-aaa-0,F3/Oq/q3Z/Q7URe,Fisseha,Takele,Wondimu,Mammo,Yohannes,male,19970825,SNNP,Cheha,011-241-4065
+rec-00000021-aaa-0,WY/r0/Eps/wFWog,Tewooros,Teferi,Hakin,Girma,Weyesa,male,19930217,Amhara,Sahila,011-291-2241
+rec-00000022-aaa-0,SC/Cv/olB/lEHjK,Wubneh,Nigussie,Abreha,Solomon,Melaku,male,19950717,Sidama,Chabe Gambeltu,011-318-4884
+rec-00000022-bbb-0,,Wupneh,Nigussie,Abreha,Solomon,Melaku,mald,19950717,Sivdama,Chabe Gambeltu,011-318-4884
+rec-00000022-bbb-1,SC/Cv/olB/lEHjK,Wubneh,Nikussie,Abreha,,Melaku,ma1e,19950717,Sidahma,Chabe Gambeltu,011-318-4884
+rec-00000022-bbb-2,SC/Cv/ooB/lEHjK,Wupneh,Nigussie,Abreha,Solommon,Melaku,maje,19950717,Sidama,Chabe Gambeltu,011-318-4884
+rec-00000023-aaa-0,GX/8h/nGu/PpLcx,Gebrehiwot,Hunegnaw,Gebreeyesus,Meshesha,Girma,male,20000530,Oromia,Robe Town,091-439-4997
+rec-00000023-bbb-0,,Gebrehiwot,Hunegnaw,Gebreeyestus,Meshesha,Girma,maie,20900530,Oromia,Robe Town,091-439-4997
+rec-00000024-aaa-0,mI/cC/njS/Zt9qa,Lisanu,Teshome,Mekonnen,Ayalew,Getachew,male,20040108,Oromia,Mena (Jimma),034-240-3765
+rec-00000025-aaa-0,37/iD/7vN/bNDqv,Tadesse,Fikadu,Sape,Kahsay,Bekele,male,20010703,Oromia,Munessa,091-689-5180
+rec-00000026-aaa-0,4V/Kj/YYn/MzQo0,Yishmebet,Genet,Mulat,Mehammed,Kiflie,female,20050716,Amhara,Dessie town,011-114-2272
+rec-00000027-aaa-0,sg/ar/CUm/NHE42,Yihenew,Tadesse,Tesfaye,Teshome,Kinfe,male,19921016,Amhara,Enemay,011-655-4861
+rec-00000028-aaa-0,QQ/rz/unI/YzcCX,Giyorgis,Tilahun,Ashagre,Mekonnen,Anis,male,19940901,Benishangul Gumz,Maokomo Special,011-111-1461
+rec-00000029-aaa-0,Ql/Sb/xHH/0nAft,Tsedy,Nigussie,Mergo,Wassie,Tigabu,female,20050513,SNNP,Ezha,025-279-1520
+rec-00000029-bbb-0,Ql/Sb/xHH/0nAft,Tsedy,Niguzsie,Meahgo,Wassie,Tigabu,fernale,20050513,SNNP,Ezhw,025-279-1520
+rec-00000029-bbb-1,Ql/Sb/xHH/0nAft,Tstedy,Nigussie,Mero,Wassi,Tigapu,female,20050513,SNNP,Ezha,025-279-1520
+rec-00000030-aaa-0,Dq/g9/681/im5E9,Asnake,Fitsum,Zewde,Zewde,Gezaehgn,male,20000409,Amhara,Gonder Zuria,011-114-0631
+rec-00000031-aaa-0,fM/qI/B9c/I8cp8,Markos,Deressa,Berhe,Bekabil,Workineh,male,20010512,Oromia,Nejo,011-652-7224
+rec-00000032-aaa-0,j9/4N/Okm/XQcl3,Alaro,Seyoum,Gebreegziabeher,Gulla,Yitayew,male,20080629,Amhara,Bechena Town,046-026-3968
+rec-00000033-aaa-0,Nj/8A/k7k/ftswI,Seifu,Meshesha,Worku,Demisachew,Addissie,male,20021130,Oromia,Ada'a,091-463-8224
+rec-00000033-bbb-0,Nj/8A/k7lc/ftswI,Seisu,Meshesha,Worku,Demisachew,Addistsie,male,20021130,Oromja,Ada'a,091-463-8224
+rec-00000034-aaa-0,sR/0W/qlJ/owuGw,Woldeyes,Mitiku,Kaleb,Yimer,Gebreyohannis,male,19961210,Amhara,Guangua,098-119-1179
+rec-00000035-aaa-0,Ha/HN/D4t/PPPak,Debelie,Alemu,Kidane,Yosef,Debesay,male,20000712,Addis Ababa,Yeka,098-111-6570
+rec-00000036-aaa-0,bp/3r/apY/iE4YX,Tenkir,Lemma,Kinfu,Shewameskot,Gebrewold,male,19970913,Amhara,Tach Gayint,058-776-4810
+rec-00000036-bbb-0,bp/3r/qpY/iE4YX,Tenkir,Lernma,,Shewameskot,Gebrewold,male,19970913,,Tach Gayint,058-776-4810
+rec-00000036-bbb-1,bp/3r/apY/iE4YX,Tenir,Lemma,Kinfu,Shewameskot,Gebrewold,mals,19970913,Amhra,Tacn Gayint,058-776-4810
+rec-00000036-bbb-2,bp/3r/apY/iE4YX,Tenlcir,Lemma,Kionfu,Sewameskot,Gebreold,male,19970913,Amhara,Tach Gayint,058-776-4810
+rec-00000037-aaa-0,7A/tS/khm/y3186,Tizita,Gebremariam,Lemma,Getu,Solomon,female,20060807,Gambela,Gambela town,011-654-6940
+rec-00000038-aaa-0,aj/m1/dvn/biRDZ,Mecha,Dawit,Mengesha,Tadesse,Zeleke,male,19900323,Somali,Gunagado,011-651-8614
+rec-00000038-bbb-0,,Mecha,Dawit,Menkesha,Tadesse,Zelecke,male,19900323,Somali,Gunagado,
+rec-00000039-aaa-0,vn/tV/uQd/7uzOy,Nardos,Yohannes,Girma,Oege,Ambaye,male,20040316,Addis Ababa,Gulele,098-119-5453
+rec-00000039-bbb-0,vn/tV/vQd/7uzOy,Nardoz,Yohannes,Girma,Oege,Ambaye,male,20040316,Addis Abapba,Gulele,098-1q9-5453
+rec-00000040-aaa-0,2U/r3/s4n/5HTWJ,Gebreegziabher,Garomisa,Yosef,Workineh,Asegachew,male,19940601,Oromia,Adama town,011-652-5298
+rec-00000040-bbb-0,2U/r3/s4ri/5HTWJ,Gebreefziabher,Garomisa,Yosef,Workineb,Asegachew,male,19940601,Oromia,,011-652-5298
+rec-00000041-aaa-0,Z3/u9/q2Q/0HFwx,Adanech,Adem,Abi,Legesse,Lemma,female,20011211,Amhara,Ebenat,011-114-1607
+rec-00000042-aaa-0,ou/yd/LJR/YUrVC,Meron,Desalegn,Ermeyas,Mohammed,Ahmed,female,20020626,Dire Dawa,Addis Ketema (DD),011-114-2581
+rec-00000043-aaa-0,yq/m4/t3I/eGpki,Azeb,Hayile,Shiferaw,Belete,Mohammed,female,19990908,Tigray,Mekelle,098-111-9459
+rec-00000044-aaa-0,xr/B7/DQA/021Gm,Hadush,Arega,Legese,Atsbeha,Atomisa,male,20000119,Amhara,Baso Liben,011-655-8842
+rec-00000045-aaa-0,Wh/yD/PLe/VvHmG,Hanna,Kesesa,Gebrekidan,Woldemichael,Mewulid,female,19940911,Oromia,Dawe Serer,091-715-0980
+rec-00000046-aaa-0,H6/0t/4Om/pOUBA,Shiferaw,Shewazemed,Tolosa,Wondimagegn,Dereje,male,20070710,Somali,Moyale (SM),034-507-1366
+rec-00000046-bbb-0,,Shifera,Shewazemed,Tolosa,Wondimajygn,Dereje,male,20070710,Somli,Moyale (SM),034-507-1366
+rec-00000046-bbb-1,,Siferaw,Sewazemed,Tolosa,Wondimagegn,Dereje,male,20070710,Somali,,034-507-1366
+rec-00000046-bbb-2,H6/0t/4Om/pOUBA,Shiveraw,Sewazemed,Tolosa,Wondimagegn,Dereje,male,2007p710,Somali,Moyale (SM),
+rec-00000047-aaa-0,W7/px/q2s/QxGid,Nebiyat,Muhammed,Ahmed,Beyan,Tesfamichael,male,20001114,Amhara,Lay Armacho,011-316-0796
+rec-00000048-aaa-0,4z/sj/lGV/K7Wte,Aboulrezak,Argaw,Mehammed,Gelan,Luelseged,male,19990518,Somali,Kebribeyah,011-651-6583
+rec-00000048-bbb-0,4z/sj/lGV/K7Wte,Aboulrezak,Arguw,Meammed,Gelan,,ma|e,19990518,Somali,Kebribeyah,011-651-6583
+rec-00000049-aaa-0,Xs/Cu/xCk/ZmUq4,Abera,Eshite,Haftu,Tenaw,Gebreegziabher,male,19900507,Amhara,West Belesa,057-373-6850
