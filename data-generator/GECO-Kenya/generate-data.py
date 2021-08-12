@@ -95,7 +95,7 @@ keyboard_NID = 0.4
 
 
 ATTR_NAME = "first_name"  # IN
-ATTR_LAST_NAME = "last_ame"  # IN
+ATTR_LAST_NAME = "last_name"  # IN
 ATTR_GENDER = "gender"  # IN
 ATTR_DOB = "dob"  # IN
 ATTR_CITY = "city"  # IN
