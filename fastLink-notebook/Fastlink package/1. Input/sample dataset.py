@@ -1,7 +1,11 @@
+import pandas as pd
+import os
+from rpy2.robjects import globalenv
+import rpy2.robjects as r_objects
+r = r_objects.r
+
 # 2.2) Select desired datafile
 def sample_dataset():
-
-    import pandas as pd
 
     df = pd.read_csv("https://raw.githubusercontent.com/jembi/mpi-toolkit-notebook/main/fastLink-notebook/data-200-100.csv")
     df.to_csv('sample_dataset.csv', index=False)
@@ -11,12 +15,6 @@ def sample_dataset():
 
 # 2.3) Upload and read data
 def read_dataset_other(file):
-
-    import pandas as pd
-    import os
-    from rpy2.robjects import globalenv
-    import rpy2.robjects as r_objects
-    r = r_objects.r
 
     file_flag = 0
     try:
