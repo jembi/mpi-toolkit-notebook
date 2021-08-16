@@ -2,6 +2,7 @@ from ipywidgets import Text
 import pandas as pd
 import os
 from rpy2.robjects import globalenv
+from rpy2.robjects.vectors import StrVector
 import rpy2.robjects as r_objects
 r = r_objects.r
 
