@@ -1,3 +1,9 @@
+import pandas as pd
+import os
+from rpy2.robjects import globalenv
+import rpy2.robjects as r_objects
+r = r_objects.r
+
 # 2.2) Select desired datafile
 def local_file(uploaded):
     file_list = list(uploaded.keys())
@@ -6,12 +12,6 @@ def local_file(uploaded):
 
 # 2.3) Upload and read data
 def read_dataset_other(file):
-
-    import pandas as pd
-    import os
-    from rpy2.robjects import globalenv
-    import rpy2.robjects as r_objects
-    r = r_objects.r
 
     file_flag = 0
     try:
