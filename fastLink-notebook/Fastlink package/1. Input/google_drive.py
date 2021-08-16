@@ -1,7 +1,12 @@
+from ipywidgets import Text
+import pandas as pd
+import os
+from rpy2.robjects import globalenv
+import rpy2.robjects as r_objects
+r = r_objects.r
+
 # 2.2) Select desired datafile
 def upload_google_drive():
-
-    from ipywidgets import Text
 
     style = {'description_width': 'initial'}
     layout = {'width': '400px'}
@@ -21,12 +26,6 @@ def upload_google_drive():
 
 # 2.3) Upload and read data
 def read_dataset_google_drive(folder_name, file_name):
-
-    import pandas as pd
-    import os
-    from rpy2.robjects import globalenv
-    import rpy2.robjects as r_objects
-    r = r_objects.r
 
     file = folder_name.value + file_name.value
     file_flag = 0
