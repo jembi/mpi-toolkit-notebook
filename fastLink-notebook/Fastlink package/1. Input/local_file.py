@@ -46,7 +46,7 @@ def read_dataset_other(file):
             pass
         file_flag = 1
     except: # Add specific exception error
-        message = "Cannot find such file")
+        message = "Cannot find such file"
         return file_flag, message
 
     return file_flag, file, col_names, s
