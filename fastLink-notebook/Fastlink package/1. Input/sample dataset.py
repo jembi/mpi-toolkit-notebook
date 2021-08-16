@@ -3,6 +3,7 @@ import os
 from rpy2.robjects import globalenv
 from rpy2.robjects.vectors import StrVector
 import rpy2.robjects as r_objects
+import rpy2.robjects.packages as r_packages
 r = r_objects.r
 
 # 2.2) Select desired datafile
