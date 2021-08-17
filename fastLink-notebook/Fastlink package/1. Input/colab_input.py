@@ -58,6 +58,7 @@ def user_input(col_names):
 
     style = {'description_width': 'initial'}
     layout = {'width': '400px'}
+
     menu_1 = Dropdown(description="1. Choose your unique identifier:", style=style, options=col_names)
 
     check_b_label = Label(value="2. Choose desired fields to exclude:")
@@ -85,6 +86,8 @@ def user_input(col_names):
         readout=True,
         readout_format='.2f',
     )
+    
+    menu_3 = Dropdown(description="5. Are you linking records on 1 (Deduplication) or 2 (Linking) datasets:", style=style, options=["Deduplication", "Linking"])
 
-    return menu_1, check_b_label, check_b_list, menu_2, slider_label, slider_1
+    return menu_1, check_b_label, check_b_list, menu_2, slider_label, slider_1, menu_3
 
