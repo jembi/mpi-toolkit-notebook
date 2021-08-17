@@ -73,7 +73,7 @@ def record_link(param_exclde_list, string_distance, cut_a, cut_p, param_exclde_s
             message = "Run successful"
             fl_flag = 2
 
-            return fl_flag, message, varnames, em_p_gamma_k_m, em_p_gamma_k_u
+            return fl_flag, message, varnames, em_p_gamma_k_m, em_p_gamma_k_u, v2
         except IndexError:
             message = "Please increase the lower bound value in Section 3!"
             fl_flag = 1
