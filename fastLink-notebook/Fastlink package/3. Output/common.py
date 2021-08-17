@@ -5,7 +5,7 @@ import gspread
 from oauth2client.client import GoogleCredentials
 
 
-# 5.1) Display results
+# 4.1) Display results
 def display_results(fields, max_no_dup, left, right, key_position):
 
     false_positives = 0
@@ -43,7 +43,7 @@ def display_results(fields, max_no_dup, left, right, key_position):
     return l_and_r, true_positives, false_positives, true_negatives, false_negatives
 
 
-# 5.2) Recall, precision and F_score results
+# 4.2) Recall, precision and F_score results
 def analytics(true_positives, false_positives, false_negatives):
 
     recall = true_positives/(true_positives + false_negatives)
@@ -81,7 +81,7 @@ def analytics(true_positives, false_positives, false_negatives):
     return recall, precision, f_score
 
 
-# 5.3) Display M and U values
+# 4.3) Display M and U values
 def weights(em_p_gamma_k_m, em_p_gamma_k_u):
 
     fields = ("Field", "Matches (M)", "Unmatches (U)")
@@ -97,7 +97,7 @@ def weights(em_p_gamma_k_m, em_p_gamma_k_u):
     return table_1, m_and_u
 
 
-# 5.4) Update data to a Google Spreadsheet
+# 4.4) Update data to a Google Spreadsheet
 def add_to_gspread(run_count, l_and_r, true_positives, false_positives, true_negatives, false_negatives, precision, recall, f_score, string_distance, cut_a, cut_p, param_exclde_str, m_and_u):
 
     auth.authenticate_user()
