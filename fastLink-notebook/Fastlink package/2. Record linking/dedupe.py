@@ -59,7 +59,7 @@ def process_dedupe(param_exclde_list, string_distance, cut_a, cut_p, param_excld
         return fl_flag, message
 
 
-def sort_records(col_names, v2, s_time):
+def sort_dedupes(col_names, v2, s_time):
 
     fields = tuple(col_names)
     left = pd.DataFrame(columns=('key',) + fields)
