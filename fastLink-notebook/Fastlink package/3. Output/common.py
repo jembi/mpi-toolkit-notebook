@@ -98,12 +98,12 @@ def weights(em_p_gamma_k_m, em_p_gamma_k_u):
 
 
 # 4.4) Update data to a Google Spreadsheet
-def add_to_gspread(run_count, l_and_r, true_positives, false_positives, true_negatives, false_negatives, precision, recall, f_score, string_distance, cut_a, cut_p, param_exclde_str, m_and_u):
+def add_to_gspread(run_count, l_and_r, true_positives, false_positives, true_negatives, false_negatives, precision, recall, f_score, string_distance, cut_a, cut_p, param_exclde_str, m_and_u, menu_3):
 
     auth.authenticate_user()
     gc = gspread.authorize(GoogleCredentials.get_application_default())
 
-    sh = gc.create('Fastlink Dedupe: Run {0}'.format(run_count))
+    sh = gc.create('Fastlink {0}: Run {1}'.format(menu_3.value, run_count))
     ws = sh.add_worksheet(title="Results", rows="100", cols="100")
     sh.del_worksheet(sh.sheet1)
     ws.update([l_and_r.columns.values.tolist()] + l_and_r.values.tolist())
