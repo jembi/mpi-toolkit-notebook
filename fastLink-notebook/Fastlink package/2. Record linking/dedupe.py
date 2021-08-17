@@ -34,7 +34,7 @@ def fl_dedupe(df_a, exclded_fields, string_distance, cut_a, cut_p):
     return get_dedupes(df_a)
 
 
-def record_link(param_exclde_list, string_distance, cut_a, cut_p, param_exclde_str, s, col_names):
+def process_dedupe(param_exclde_list, string_distance, cut_a, cut_p, param_exclde_str, s, col_names):
 
     if len(param_exclde_list) != len(col_names):
         try:
