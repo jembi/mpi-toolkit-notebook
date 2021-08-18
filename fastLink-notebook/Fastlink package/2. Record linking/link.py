@@ -1,4 +1,5 @@
 import time
+import os
 import pandas as pd
 from common import analytics
 from rpy2.robjects import globalenv
@@ -19,12 +20,12 @@ def fl_link(df_a, df_b, exclded_fields, string_distance, cut_a, cut_p):
                 
               varnames <- colnames(dfA)
               varnames <- varnames[-which(varnames %in% c({0}))]
-              fl_out <- fastLink(dfA = dfA, dfB = dfB, varnames = varnames,
+               invisible(capture.output(fl_out <- fastLink(dfA = dfA, dfB = dfB, varnames = varnames,
                                   stringdist.match = varnames, stringdist.method = '{1}', cut.a = {2}, cut.p = {3},
                                   dedupe.matches = FALSE, linprog.dedupe = FALSE,
                                   cond.indep = TRUE,
                                   n.cores = 8,
-                                  verbose = TRUE)
+                                  verbose = TRUE)))
               inds_ab <- data.table(cbind(fl_out$matches$inds.a, fl_out$matches$inds.b))
               inds_ab[, `:=`(V3, pasteT(V2)), by = V1]
               inds_ab <- inds_ab[,.(V1, V3)]
