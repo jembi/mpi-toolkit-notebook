@@ -90,8 +90,9 @@ keyboard_PN = 0.4
 #National ID Corruptor
 
 missing_val_NID = 0.4 
-ocr_NID = 0.2 
-keyboard_NID = 0.4 
+ocr_NID = 0.2
+edit_NID = 0.2
+keyboard_NID = 0.2 
 
 
 ATTR_NAME = "first_name"  # IN
@@ -122,7 +123,7 @@ num_dup_rec = int(args[1])
 # Set the file name of the data set to be generated (this will be a comma
 # separated values, CSV, file).
 #
-# out_file_name = 'data-{}-{}.csv'.format(num_org_rec, num_dup_rec)
+#out_file_name = 'data-{}-{}.csv'.format(num_org_rec, num_dup_rec)
 out_file_name = args[2]
 
 # Set the file name of the data set to be generated (this will be
@@ -309,6 +310,7 @@ attr_mod_prob_dictionary = {
 attr_mod_data_dictionary = {   
     ATTR_NATIONAL_ID: [(missing_val_NID, missing_val_corruptor),
                        (ocr_NID, ocr_corruptor),
+                       (edit_NID, edit_corruptor2),
                        (keyboard_NID, keyboard_corruptor)],
     ATTR_NAME: [(missing_val_FN, missing_val_corruptor),
                 (name_misspell_FN, name_misspell_corruptor),
