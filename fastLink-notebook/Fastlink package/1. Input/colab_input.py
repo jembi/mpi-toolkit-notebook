@@ -87,7 +87,8 @@ def user_input(col_names):
         readout_format='.2f',
     )
     
-    menu_3 = Dropdown(layout=layout, description="5. Are you linking records on 1 (Deduplication) or 2 (Linking) datasets:", style=style, options=["Deduplication", "Linking"])
+    layout2 = {'width': '600px'}
+    menu_3 = Dropdown(layout=layout2, description="5. Are you linking records on 1 (Deduplication) or 2 (Linking) datasets:", style=style, options=["Deduplication", "Linking"])
 
     return menu_1, check_b_label, check_b_list, menu_2, slider_label, slider_1, menu_3
 
