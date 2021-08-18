@@ -20,7 +20,7 @@ def fl_link(df_a, df_b, exclded_fields, string_distance, cut_a, cut_p):
                 
               varnames <- colnames(dfA)
               varnames <- varnames[-which(varnames %in% c({0}))]
-               invisible(capture.output(fl_out <- fastLink(dfA = dfA, dfB = dfB, varnames = varnames,
+              invisible(capture.output(fl_out <- fastLink(dfA = dfA, dfB = dfB, varnames = varnames,
                                   stringdist.match = varnames, stringdist.method = '{1}', cut.a = {2}, cut.p = {3},
                                   dedupe.matches = FALSE, linprog.dedupe = FALSE,
                                   cond.indep = TRUE,
