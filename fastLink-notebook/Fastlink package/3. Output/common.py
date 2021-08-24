@@ -13,33 +13,22 @@ def display_results(fields, max_no_dup, left, right, key_position):
     false_negatives = 0
     true_negatives = 0
 
-    col = (('key',) + fields) * max_no_dup
+    col = ('key',) + fields
     l_and_r = pd.DataFrame(columns=col)
-    empty_tup = ("",) * len(('key',) + fields)
 
+    k = 0
     for i in range(left.shape[0]):
-        pop_tup = ()
-        pop_tup = tuple(left.values[i])
-        count = 0
-        for j in range(right.shape[0]):
-            if right.values[j][0] == left.values[i][0]:
-                pop_tup = pop_tup + tuple(right.values[j])
-                count = count + 1
-                if left.values[i][key_position][:12] == right.values[j][key_position][:12]:
-                    true_positives = true_positives + 1
-                else:
-                    false_positives = false_positives + 1
-        pop_tup = pop_tup + (empty_tup * ((max_no_dup - 1) - count))
-        if (max_no_dup - 1) - count == 3:
-            for k in range(len(left)):
-                neg_count = 0
-                if left.values[k][key_position][:12] == pop_tup[key_position][:12]:
-                    neg_count = neg_count + 1
-            if neg_count < 2:
-                true_negatives = true_negatives + 1
-            else:
-                false_negatives = false_negatives + 1
-        l_and_r.loc[i] = pop_tup
+      dup = right[right['key'] == left.values[i][0]]
+      l_and_r.loc[k] = left.loc[i]
+      if len(dup) == 0:
+        k = k + 1
+      else:
+        k = k + 1
+        for j in range(len(dup)):
+          l_and_r.loc[k] = dup.values[j]
+          k = k + 1
+      l_and_r.loc[k] = "========="
+      k = k + 1
     return l_and_r, true_positives, false_positives, true_negatives, false_negatives
 
 
