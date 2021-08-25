@@ -13,19 +13,30 @@ def display_results(fields, max_no_dup, left, right, key_position):
     false_negatives = 0
     true_negatives = 0
 
-    col = ('key',) + fields
-    l_and_r = pd.DataFrame(columns=col)
+    l_and_r = pd.DataFrame(columns=('key',) + fields)
 
     k = 0
     for i in range(left.shape[0]):
       dup = right[right['key'] == left.values[i][0]]
       l_and_r.loc[k] = left.loc[i]
       if len(dup) == 0:
+        for h in range(left.shape[0]):
+          neg_count = 0
+          if left.values[h][key_position][:12] == left.values[i][key_position][:12]:
+            neg_count = neg_count + 1
+        if neg_count < 2:
+          true_negatives = true_negatives + 1
+        else:
+          false_negatives = false_negatives + 1
         k = k + 1
       else:
         k = k + 1
         for j in range(len(dup)):
           l_and_r.loc[k] = dup.values[j]
+          if left.values[i][key_position][:12] == dup.values[j][key_position][:12]:
+            true_positives = true_positives + 1
+          else:
+            false_positives = false_positives + 1
           k = k + 1
       l_and_r.loc[k] = "========="
       k = k + 1
