@@ -46,7 +46,7 @@ def upload_dataset(file):
         message = "Cannot find such file"
         return file_flag, message
 
-    return file_flag, file, col_names, menu_1, menu_2
+    return file_flag, col_names, menu_1, menu_2
 
 # 2.4) Read data
 def read_dataset(file, identifier):
@@ -63,7 +63,7 @@ def read_dataset(file, identifier):
     except OSError:
         pass
 
-    return s
+    return s, file
 
 # 3) Capture User input (Always)
 def user_input(col_names):
