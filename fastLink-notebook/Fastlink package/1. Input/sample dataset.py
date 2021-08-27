@@ -1,5 +1,3 @@
-import pandas as pd
-
 # 2.2) Select desired datafile
 def sample_dataset():
 
