@@ -1,8 +1,6 @@
 import pandas as pd
 import os
 import time
-from IPython.utils import io
-%load_ext google.colab.data_table
 
 # Import rpy2 packages
 from rpy2.robjects import globalenv
@@ -20,16 +18,15 @@ from oauth2client.client import GoogleCredentials
 run_count = 1
 
 # Fastlink imports
-with io.capture_output() as captured:
-    utils = r_packages.importr('utils')
-    utils.chooseCRANmirror(ind=1)
-    pack_names = ('fastLink', 'tictoc', 'strex', 'data.table', 'csv')
-    names_to_install = [x for x in pack_names if not r_packages.isinstalled(x)]
-    if len(names_to_install) > 0:
-        utils.install_packages(StrVector(names_to_install))
-    base = r_packages.importr('base')
-    stats = r_packages.importr('stats')
-    fastLink = r_packages.importr('fastLink')
-    strex = r_packages.importr('strex')
-    data_table = r_packages.importr('data.table')
-    stringr = r_packages.importr('stringr')
+utils = r_packages.importr('utils')
+utils.chooseCRANmirror(ind=1)
+pack_names = ('fastLink', 'tictoc', 'strex', 'data.table', 'csv')
+names_to_install = [x for x in pack_names if not r_packages.isinstalled(x)]
+if len(names_to_install) > 0:
+    utils.install_packages(StrVector(names_to_install))
+base = r_packages.importr('base')
+stats = r_packages.importr('stats')
+fastLink = r_packages.importr('fastLink')
+strex = r_packages.importr('strex')
+data_table = r_packages.importr('data.table')
+stringr = r_packages.importr('stringr')
