@@ -66,7 +66,7 @@ def read_dataset(file, identifier):
     return s, file
 
 # 3) Capture User input (Always)
-def user_input(col_names):
+def user_input(col_names, menu_1):
 
     style = {'description_width': 'initial'}
     layout = {'width': '400px'}
