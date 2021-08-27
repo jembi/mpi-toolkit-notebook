@@ -97,5 +97,5 @@ def user_input(col_names, menu_1):
         readout_format='.2f',
     )
     
-    return menu_1, check_b_label, check_b_list, menu_3, slider_label, slider_1
+    return check_b_label, check_b_list, menu_3, slider_label, slider_1
 
