@@ -23,7 +23,7 @@ utils.chooseCRANmirror(ind=1)
 pack_names = ('fastLink', 'tictoc', 'strex', 'data.table', 'csv')
 names_to_install = [x for x in pack_names if not r_packages.isinstalled(x)]
 if len(names_to_install) > 0:
-    utils.install_packages(StrVector(names_to_install))
+  utils.install_packages(StrVector(names_to_install))
 base = r_packages.importr('base')
 stats = r_packages.importr('stats')
 fastLink = r_packages.importr('fastLink')
