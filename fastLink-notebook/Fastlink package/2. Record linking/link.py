@@ -1,11 +1,4 @@
-import time
-import os
-import pandas as pd
 from common import analytics
-from rpy2.robjects import globalenv
-import rpy2.robjects as r_objects
-r = r_objects.r
-
 
 # 3.2) Run fastlink
 def fl_link(df_a, df_b, exclded_fields, string_distance, cut_a, cut_p):
