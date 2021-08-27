@@ -30,3 +30,6 @@ fastLink = r_packages.importr('fastLink')
 strex = r_packages.importr('strex')
 data_table = r_packages.importr('data.table')
 stringr = r_packages.importr('stringr')
+
+def touch():
+    pass
