@@ -1,9 +1,8 @@
 # 2.1) Pick method of uploading csv file (Always)
 def upload_method():
-    from ipywidgets import Dropdown
-    print("Test")
-#     menu_1 = Dropdown(options=['Upload from google drive', 'Upload local file', "Use sample dataset"])
-#     return menu_1
+    
+    menu_1 = Dropdown(options=['Upload from google drive', 'Upload local file', "Use sample dataset"])
+    return menu_1
 
 # 2.3) Choose Unique ID and Dedupe/Linking
 def upload_dataset(file):
