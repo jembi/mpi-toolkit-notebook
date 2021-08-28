@@ -1,4 +1,4 @@
-import colab_imports
+from ipywidgets import Dropdown
 
 # 2.1) Pick method of uploading csv file (Always)
 def upload_method():
