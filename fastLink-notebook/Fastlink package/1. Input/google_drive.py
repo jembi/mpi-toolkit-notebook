@@ -1,3 +1,5 @@
+from ipywidgets import Text
+
 # 2.2) Select desired datafile
 def upload_google_drive():
 
