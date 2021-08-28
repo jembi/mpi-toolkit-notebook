@@ -1,3 +1,12 @@
+from ipywidgets import Dropdown, FloatSlider, Text, GridBox, Checkbox, Label, FloatRangeSlider
+import pandas as pd
+import os
+from rpy2.robjects import globalenv
+from rpy2.robjects.vectors import StrVector
+import rpy2.robjects as r_objects
+import rpy2.robjects.packages as r_packages
+r = r_objects.r
+
 # 2.1) Pick method of uploading csv file (Always)
 def upload_method():
     
