@@ -1,3 +1,5 @@
+import colab_imports
+
 # 2.1) Pick method of uploading csv file (Always)
 def upload_method():
 
