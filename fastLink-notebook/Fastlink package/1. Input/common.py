@@ -56,7 +56,9 @@ def user_input(col_names, menu_1):
 
     style = {'description_width': 'initial'}
     layout = {'width': '400px'}
-
+    
+    slider_label = Label(value="1. Choose desired fields to exclude:")
+    
     check_b_list = []
     for i in range(len(col_names)):
         if col_names[i] == menu_1.value:
