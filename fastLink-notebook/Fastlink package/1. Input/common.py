@@ -1,8 +1,6 @@
-from ipywidgets import Dropdown
-
 # 2.1) Pick method of uploading csv file (Always)
 def upload_method():
-
+    from ipywidgets import Dropdown
     menu_1 = Dropdown(options=['Upload from google drive', 'Upload local file', "Use sample dataset"])
     return menu_1
 
