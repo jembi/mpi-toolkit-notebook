@@ -4,7 +4,6 @@ from rpy2.robjects import globalenv
 import rpy2.robjects as r_objects
 r = r_objects.r
 
-
 # 3.2) Run fastlink
 def capture_user_input(menu_1, check_b_list, menu_2, slider_1):
 

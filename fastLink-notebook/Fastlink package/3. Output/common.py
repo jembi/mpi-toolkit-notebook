@@ -4,7 +4,6 @@ from google.colab import auth
 import gspread
 from oauth2client.client import GoogleCredentials
 
-
 # 4.1) Display results
 def display_results(fields, max_no_dup, left, right, key_position):
 
