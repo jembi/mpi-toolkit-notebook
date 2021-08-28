@@ -57,7 +57,7 @@ def user_input(col_names, menu_1):
     style = {'description_width': 'initial'}
     layout = {'width': '400px'}
     
-    slider_label = Label(value="1. Choose desired fields to exclude:")
+    check_b_label = Label(value="1. Choose desired fields to exclude:")
     
     check_b_list = []
     for i in range(len(col_names)):
@@ -83,5 +83,5 @@ def user_input(col_names, menu_1):
         readout_format='.2f',
     )
     
-    return check_b_list, menu_3, slider_label, slider_1
+    return check_b_label, check_b_list, menu_3, slider_label, slider_1
 
