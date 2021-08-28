@@ -1,6 +1,3 @@
-import pandas as pd
-from ipywidgets import Dropdown, FloatSlider, Text, GridBox, Checkbox, Label, FloatRangeSlider
-
 # 2.1) Pick method of uploading csv file (Always)
 def upload_method():
 
