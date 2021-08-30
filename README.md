@@ -14,7 +14,7 @@ This toolkit comprises of 3 components:
 
 ---
 
-# Usage/Requirements
+## Usage/Requirements
 
 This 3-component tool has been developed in Google Colab notebooks using Python. Colab is a hosted Juypter notebook service that requires no setup to use, while providing free access to computing resources.
 
@@ -23,6 +23,6 @@ Colab is a product from Google Research, therefore a Google account is required 
 ## Contributing
 You may view/add issues here: [Click here](https://github.com/jembi/mpi-toolkit-notebook/issues)
 
-# License
+## License
 [GNU](https://github.com/jembi/mpi-toolkit-notebook/blob/main/LICENSE)
 
