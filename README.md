@@ -12,8 +12,6 @@ This toolkit comprises of 3 components:
 
 > To learn more about patient matching and the key features mentioned above please see the full documentation. (add link here)
 
-
-Horizontal rule:
 ---
 
 # Usage/Requirements
