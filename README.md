@@ -10,7 +10,7 @@ This toolkit comprises of 3 components:
 * Blocking 
 * Matching Process
 
-> To learn more about patient matching and the key features mentioned above please see the full documentation. (add link here)
+> To learn more about patient matching and get a more comprehensive understanding of the key features mentioned above please see the full documentation. (add link here)
 
 ---
 
