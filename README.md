@@ -14,7 +14,7 @@ This toolkit comprises of 3 components:
 
 ---
 
-## Usage/Requirements
+## Requirements
 
 This 3-component tool has been developed in Google Colab notebooks using Python. Colab is a hosted Juypter notebook service that requires no setup to use, while providing free access to computing resources.
 
