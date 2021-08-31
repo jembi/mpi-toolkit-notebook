@@ -1,4 +1,10 @@
 from common import analytics
+import pandas as pd
+from rpy2.robjects import globalenv
+from rpy2.robjects.vectors import StrVector
+import rpy2.robjects as r_objects
+import rpy2.robjects.packages as r_packages
+r = r_objects.r
 
 # 3.2) Run fastlink
 def fl_dedupe(df_a, exclded_fields, string_distance, cut_a, cut_p):
