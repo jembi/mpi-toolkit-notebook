@@ -37,13 +37,13 @@ if len(args) != 3:
 #@title Data Generator Variables
 
 #Probability Distribution for Attributes
-given_name_val= 0.22
-family_name_val= 0.21
-gender_val=0.01
-dob_val=0.1
-city_val=0.1
-pn_val=0.17
-nid_val=0.19
+given_name_val= 0.21
+family_name_val= 0.17
+gender_val=0.09
+dob_val=0.09
+city_val=0.12
+pn_val=0.15
+nid_val=0.17
 
 #Given Name Corruptor
 
@@ -130,7 +130,7 @@ out_file_name = args[2]
 # Set the maximum number of duplicate records can be generated per original
 # record.
 #
-max_duplicate_per_record = 2
+max_duplicate_per_record = 1
 
 # Set the probability distribution used to create the duplicate records for one
 # original record (possible values are: 'uniform', 'poisson', 'zipf').
@@ -144,7 +144,7 @@ max_modification_per_attr = 1
 
 # Set the number of modification that are to be applied to a record.
 #
-num_modification_per_record = 4
+num_modification_per_record = 2
 
 # Check if the given the unicode encoding selected is valid.
 #
