@@ -1,6 +1,5 @@
 def compare(str1, str2, level=2):
-    if len(str1) * len(str2) == 0:
-        return False
+
     return edit_distance(str1, str2) <= level
 
 
