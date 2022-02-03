@@ -10,7 +10,7 @@ This toolkit comprises of 3 components:
 * Blocking notebook
 * Fastlink Matching Process notebook
 
-> To learn more about patient matching and get a more comprehensive understanding of the key features mentioned above please see the full documentation [Click here](https://gicsandbox.notion.site/Patient-Matching-37eb41f9619148239d2d0507b7ec7cb2)
+> To learn more about patient matching and get a more comprehensive understanding of the key features mentioned above please see the [full documentation](https://gicsandbox.notion.site/Patient-Matching-37eb41f9619148239d2d0507b7ec7cb2)
 
 ---
 
