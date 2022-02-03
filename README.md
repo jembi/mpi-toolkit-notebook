@@ -6,11 +6,11 @@ The MPI toolkit gives health providers the ability to identify and link patient 
 
 This toolkit comprises of 3 components:
 
-* Dataset Generator
-* Blocking 
-* Matching Process
+* Dataset Generator notebook
+* Blocking notebook
+* Fastlink Matching Process notebook
 
-> To learn more about patient matching and get a more comprehensive understanding of the key features mentioned above please see the full documentation. (add link here)
+> To learn more about patient matching and get a more comprehensive understanding of the key features mentioned above please see the full documentation [Click here](https://gicsandbox.notion.site/Patient-Matching-37eb41f9619148239d2d0507b7ec7cb2)
 
 ---
 
